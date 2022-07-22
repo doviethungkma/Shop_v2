@@ -1,0 +1,27 @@
+@import "../../../sass/variable.scss";
+@import "../../../sass/mixins.scss";
+
+.delete__popup {
+  width: 300px !important;
+  height: auto !important;
+  z-index: 100000 !important;
+
+  h4 {
+    font-size: 1rem;
+    font-weight: 600;
+    padding: 0;
+    text-align: center;
+  }
+
+  &__content {
+    margin-top: 0 !important;
+    @media screen and (min-width: $small-tablet-size) {
+      grid-template-columns: 1fr !important;
+    }
+  }
+
+  &__button {
+    @include flex(row, center, center);
+    margin-top: 20px;
+  }
+}

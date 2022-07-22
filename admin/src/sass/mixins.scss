@@ -1,0 +1,65 @@
+@import "variable.scss";
+
+@mixin flex($flex-direction, $align-item, $justify-content) {
+  display: flex;
+  flex-direction: $flex-direction;
+  justify-content: $justify-content;
+  align-items: $align-item;
+}
+
+@mixin grid($column) {
+  display: grid;
+  grid-template-columns: repeat($column, 1fr);
+}
+
+@mixin large-pc {
+  @media only screen and (min-width: $large-pc-size) {
+    @content;
+  }
+}
+
+@mixin small-pc {
+  @media only screen and (min-width: $small-pc-size) {
+    @content;
+  }
+}
+
+@mixin tablet {
+  @media only screen and (min-width: $tablet-size) {
+    @content;
+  }
+}
+
+@mixin small-tablet {
+  @media only screen and (min-width: $small-tablet-size) {
+    @content;
+  }
+}
+
+@mixin mobile {
+  @media only screen and (min-width: $mobile-size) {
+    @content;
+  }
+}
+
+@mixin custom-scroll {
+  &::-webkit-scrollbar {
+    width: 6px;
+    height: 6px;
+  }
+
+  &::-webkit-scrollbar-track {
+    border-radius: 10px;
+    background: rgba(0, 0, 0, 0.1);
+  }
+  &::-webkit-scrollbar-thumb {
+    border-radius: 10px;
+    background: rgba(0, 0, 0, 0.2);
+  }
+  &::-webkit-scrollbar-thumb:hover {
+    background: rgba(0, 0, 0, 0.4);
+  }
+  &::-webkit-scrollbar-thumb:active {
+    background: rgba(0, 0, 0, 0.9);
+  }
+}

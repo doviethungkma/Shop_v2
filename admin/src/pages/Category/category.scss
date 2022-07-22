@@ -1,0 +1,19 @@
+@import "../../sass/variable.scss";
+@import "../../sass/mixins.scss";
+
+.category {
+  &__modal {
+    height: auto !important;
+    @include small-tablet {
+      width: 50% !important;
+    }
+    @include small-pc {
+      width: 30% !important;
+    }
+    &__content {
+      @media screen and (min-width: $small-tablet-size) {
+        grid-template-columns: 1fr !important;
+      }
+    }
+  }
+}

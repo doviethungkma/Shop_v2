@@ -1,0 +1,16 @@
+@import "../../sass/variable.scss";
+@import "../../sass/mixins.scss";
+
+.dashboard {
+  margin-top: 85px;
+  width: 100%;
+
+  @media screen and (min-width: 1500px) {
+    padding: 0 20px;
+  }
+
+  input[type="date"] {
+    background: transparent;
+    color: var(--color-dark);
+  }
+}

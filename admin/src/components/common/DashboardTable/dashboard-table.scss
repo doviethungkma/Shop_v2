@@ -1,0 +1,44 @@
+@import "../../../sass/variable.scss";
+@import "../../../sass/mixins.scss";
+
+.table {
+  margin-top: 2rem;
+  width: 100%;
+  animation: slideTop 0.8s ease-in-out;
+
+  h2 {
+    margin-bottom: 0.8rem;
+  }
+
+  .table {
+    thead tr th:nth-child(2),
+    tbody tr td:nth-child(2),
+    thead tr th:nth-child(4),
+    tbody tr td:nth-child(4) {
+      display: none;
+    }
+
+    @include small-tablet {
+      thead tr th:nth-child(2),
+      tbody tr td:nth-child(2) {
+        display: table-cell;
+      }
+    }
+    @include small-tablet {
+      thead tr th:nth-child(2),
+      tbody tr td:nth-child(2),
+      thead tr th:nth-child(4),
+      tbody tr td:nth-child(4) {
+        display: table-cell;
+      }
+    }
+  }
+
+  p {
+    text-align: center;
+    display: block;
+    color: var(--color-primary);
+    margin: 1rem auto;
+    cursor: pointer;
+  }
+}

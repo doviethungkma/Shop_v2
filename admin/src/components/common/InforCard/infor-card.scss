@@ -1,0 +1,60 @@
+@import "../../../sass/variable.scss";
+@import "../../../sass/mixins.scss";
+
+.inforcard {
+  background: var(--color-white);
+  padding: $card-padding;
+  border-radius: $card-border-radius;
+  margin-top: 1rem;
+  box-shadow: var(--box-shadow);
+  cursor: pointer;
+  transition: all 300ms ease;
+  animation: slideBottom 0.5s ease-in-out;
+
+  &:hover {
+    box-shadow: none;
+  }
+
+  i {
+    background: var(--color-primary);
+    padding: 0.5rem;
+    border-radius: 50%;
+    color: var(--color-white);
+    font-size: 2rem;
+  }
+
+  &__middle {
+    @include flex(row, center, space-between);
+  }
+
+  .progress {
+    position: relative;
+    width: 92px;
+    height: 92px;
+    border-radius: 50%;
+
+    .number {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      @include flex(row, center, center);
+    }
+  }
+
+  svg {
+    width: 7rem;
+    height: 7rem;
+
+    circle {
+      fill: none;
+      stroke: var(--color-primary);
+      stroke-width: 14;
+      stroke-linecap: round;
+      transform: translate(5px, 5px);
+      stroke-dasharray: 110;
+      stroke-dashoffset: 92;
+    }
+  }
+}

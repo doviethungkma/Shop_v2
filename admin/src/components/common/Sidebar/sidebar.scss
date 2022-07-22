@@ -1,0 +1,126 @@
+@import "../../../sass/variable.scss";
+@import "../../../sass/mixins.scss";
+// @import "./index.scss";
+
+.sidebar {
+  height: 100%;
+  width: 300px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background: var(--color-white);
+  box-shadow: var(--box-shadow);
+  z-index: 10;
+  transform: all 0.3s ease-in-out;
+  animation: slideLeft 0.8s ease-in-out;
+
+  @include small-tablet {
+    width: 100px;
+    box-shadow: none;
+
+    &:hover {
+      width: 250px;
+      h3 {
+        display: block;
+      }
+      h2 {
+        display: block;
+      }
+    }
+  }
+
+  @include small-pc {
+    width: 250px;
+  }
+
+  &__top {
+    @include flex(row, center, space-between);
+    height: 65px;
+    padding: 10px 20px;
+    @include small-tablet {
+      padding: 10px 30px;
+    }
+
+    &__logo {
+      @include flex(row, center, center);
+      img {
+        width: 30px;
+        height: 30px;
+      }
+
+      h2 {
+        margin-left: 10px;
+
+        @include small-tablet {
+          display: none;
+        }
+        @include small-pc {
+          display: block;
+        }
+      }
+    }
+
+    .close {
+      cursor: pointer;
+      @include small-tablet {
+        display: none;
+      }
+    }
+  }
+
+  &__menu {
+    margin-top: 30px;
+
+    &__item {
+      @include flex(row, center, flex-start);
+      height: 50px;
+      color: var(--color-info-dark);
+      cursor: pointer;
+      transition: all 0.3s ease-in-out;
+
+      h3 {
+        margin-left: 20px;
+        font-weight: 500;
+        @include small-tablet {
+          display: none;
+        }
+
+        @include small-pc {
+          display: block;
+        }
+      }
+
+      i {
+        font-size: 1.6rem;
+        margin-left: 30px;
+        transition: all 0.3s ease-in-out;
+      }
+
+      &:hover {
+        color: var(--color-primary);
+        width: 250px;
+
+        i {
+          margin-left: 40px;
+        }
+      }
+
+      &--active {
+        background-color: var(--color-light);
+        color: var(--color-primary);
+        margin-left: 0;
+
+        &:before {
+          content: "";
+          width: 6px;
+          height: 100%;
+          background: var(--color-primary);
+        }
+
+        i {
+          color: var(--color-primary);
+        }
+      }
+    }
+  }
+}

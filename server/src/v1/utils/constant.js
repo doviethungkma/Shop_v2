@@ -1,0 +1,8 @@
+exports.ADMIN_ROLE = 114273;
+exports.SHIPPER_ROLE = 785373;
+exports.WAREHOSE_ROLE = 558058;
+exports.USER_ROLE = 103578;
+exports.USER_STATUS_ACTIVE = 1;
+exports.USER_STATUS_INACTIVE = 0;
+exports.COUPON_STATUS_ACTIVE = "active";
+exports.COUPON_STATUS_INACTIVE = "inactive";

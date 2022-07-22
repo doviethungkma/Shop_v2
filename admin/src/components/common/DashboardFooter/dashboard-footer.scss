@@ -1,0 +1,32 @@
+@import "../../../sass/variable.scss";
+@import "../../../sass/mixins.scss";
+
+.dashboard__footer {
+  @include grid(1);
+  gap: 20px;
+
+  @include tablet {
+    grid-template-columns: 2fr 1fr;
+  }
+
+  .recent-comment {
+    margin-top: 30px;
+    animation: slideTop 0.8s ease-in-out;
+    h2 {
+      margin-bottom: 26px;
+    }
+
+    &__content {
+      background-color: var(--color-white);
+      border-radius: $border-radius-3;
+      box-shadow: $box-shadow;
+      padding: 35px 20px;
+      transition: all 0.3s ease;
+
+      &:hover {
+        cursor: pointer;
+        box-shadow: none;
+      }
+    }
+  }
+}
